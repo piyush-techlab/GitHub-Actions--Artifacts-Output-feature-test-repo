@@ -25,7 +25,8 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: |
+          name: uploading vite fite
+          path: |
             '/Users/peeyushmohanty/Documents/Tech Learnings/GitHub Actions/GitHub-Artifacts&OUtPut/dist'
   deploy:
     needs: build

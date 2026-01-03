@@ -31,10 +31,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: dist
+      - name: download Artifacts
         uses: actions/download-artifact@v5
         with:
-          name: Downloaded-artifacts
+          name: dist
       - name: check the downloaded artifact
         run: ls
       - name: Deploy

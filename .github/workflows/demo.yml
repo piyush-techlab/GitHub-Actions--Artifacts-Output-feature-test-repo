@@ -34,7 +34,7 @@ jobs:
       - name: download Artifacts
         uses: actions/download-artifact@v5
         with:
-          name: dist
+          name: dist-files
       - name: check the downloaded artifact
         run: ls
       - name: Deploy

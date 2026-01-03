@@ -25,7 +25,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: uploading vite fite
+          name: vite file
           path: dist
   deploy:
     needs: build
@@ -34,7 +34,7 @@ jobs:
       - name: download Artifacts
         uses: actions/download-artifact@v5
         with:
-          name: dist-files
+          name: vite file
       - name: check the downloaded artifact
         run: ls
       - name: Deploy

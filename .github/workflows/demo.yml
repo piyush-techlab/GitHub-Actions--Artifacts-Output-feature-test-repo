@@ -15,7 +15,7 @@ jobs:
   build:
     needs: test
     runs-on: ubuntu-latest
-    output:
+    outputs:
       script-file: $ {{steps.publish.outputs.script-file }}
     steps:
       - name: Get code
@@ -42,5 +42,7 @@ jobs:
           name: vite file
       - name: check the downloaded artifact
         run: ls
+      - name: Output contents
+        run: echo "{{$needs.build.script-file}}"
       - name: Deploy
         run: echo "Deploying..."

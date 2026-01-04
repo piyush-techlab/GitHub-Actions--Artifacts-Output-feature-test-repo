@@ -43,6 +43,6 @@ jobs:
       - name: check the downloaded artifact
         run: ls
       - name: Output contents
-        run: echo "${{ needs.build.script-file}}"
+        run: echo "${{ needs.build.outputs.script-file}}"
       - name: Deploy
         run: echo "Deploying..."

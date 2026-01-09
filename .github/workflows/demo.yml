@@ -38,7 +38,7 @@ jobs:
         id: publish
         run: find dist/assets/*.js -type f -execdir echo 'script-file={}' >> $GITHUB_OUTPUT ';'
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4 #upload artifcats to make it avalaible post the step executed
         with:
           name: vite file
           path: dist
@@ -46,7 +46,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: download Artifacts
+      - name: download Artifacts #Downalod doc/artifact 
         uses: actions/download-artifact@v5
         with:
           name: vite file
